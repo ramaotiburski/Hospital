@@ -34,7 +34,7 @@ public class PacienteController {
     //teste
     @GetMapping("/listar")
     public String getPacientes(Model model) {
-
+	//teste
         model.addAttribute("pacientes", pacienteRepositorio.findAll());
         return "index";
     }
