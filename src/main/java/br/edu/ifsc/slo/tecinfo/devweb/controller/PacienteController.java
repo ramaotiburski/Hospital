@@ -31,6 +31,7 @@ public class PacienteController {
         this.pacienteRepositorio = pacienteRepositorio;
     }
 
+    //teste
     @GetMapping("/listar")
     public String getPacientes(Model model) {
 
