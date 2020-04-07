@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>Cadastrar Paciente</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h3> Cadastrar Paciente</h3>
+        <form action="#" th:action="@{/pacientes/adicionar}"
+              th:object="${paciente}" method="post">
+
+            <label for="cpf">CPF:</label> <input
+                type="text" th:field="*{cpf}" id="cpf"
+                placeholder="CPF"> <br>
+
+            <label for="nome" >Nome:</label> <input
+                type="text" th:field="*{nome}" id="nome"
+                placeholder="Nome"> <br>
+            
+            <label for="doenca" >Doença:</label> <input
+                type="text" th:field="*{doenca}" id="nome"
+                placeholder="Doença"> <br>
+
+            <input type="submit" value="Cadastrar Paciente">
+
+        </form>
+
+    </body>
+</html>

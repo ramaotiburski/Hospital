@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity4">
+    <head>
+        <title>Atualizar Paciente</title>
+        <meta charset="UTF-8">
+    </head>
+    <body>
+        
+        <div >
+        <form action="#" th:action="@{/pacientes/update/{codigo}(codigo=${paciente.codigo})}" th:object="${paciente}" method="post"><br>
+            <div>
+                <h5 >Alterar cadastro de Paciente</h5>
+            </div>
+            <div >
+                <label for="cpf">CPF:</label> <input
+                type="text" th:field="*{cpf}" id="cpf"
+                placeholder="CPF"> <br>
+
+            <label for="nome" >Nome:</label> <input
+                type="text" th:field="*{nome}" id="nome"
+                placeholder="Nome"> <br>
+            
+            <label for="doenca" >Doença:</label> <input
+                type="text" th:field="*{doenca}" id="nome"
+                placeholder="Doença"> <br>
+            
+                <button  type="submit" >Salvar</button><br><br>
+            </div>
+        </form>
+        </div>
+    </body>
+</html>
